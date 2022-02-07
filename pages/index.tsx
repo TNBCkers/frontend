@@ -1,0 +1,17 @@
+import type { NextPage } from "next";
+import Image from "next/image";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+
+const Home: NextPage = () => {
+  return (
+    <>
+      <div className="home ">
+        <Hero />
+        <Services />
+      </div>
+    </>
+  );
+};
+
+export default Home;
