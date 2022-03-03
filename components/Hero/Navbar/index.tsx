@@ -12,7 +12,7 @@ const Navbar: FC = () => {
       <Logo height={30} width={200} white />
       <Bars onClick={setShowMenu} />
       <HorizontalNavBar
-        className={"hidden md:flex md:justify-between w-full"}
+        className={"hidden md:flex md:justify-between md:items-center w-full"}
       />
       {showMenu && <NavMenu />}
     </div>

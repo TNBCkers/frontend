@@ -1,24 +1,26 @@
 import React, { BaseHTMLAttributes, FC } from "react";
 
-interface NavLinkProps {
-  filled: Boolean;
+export interface NavLinkProps {
+  filled?: Boolean;
 }
 
 const NavLink: FC<BaseHTMLAttributes<any> & NavLinkProps> = ({
   filled,
   children,
   className,
+  onClick,
 }) => {
   return (
-    <span
+    <button
       className={
         filled
-          ? `text-blue px-6 py-2 bg-white rounded-xl font-semibold mx-3 ${className}`
-          : `text-white ${className} mx-3`
+          ? `text-blue px-6 py-2 bg-white rounded-xl font-semibold mx-3 hover:cursor-pointer ${className}`
+          : `text-white ${className} mx-3 hover:cursor-pointer`
       }
+      onClick={onClick}
     >
       {children}
-    </span>
+    </button>
   );
 };
 
