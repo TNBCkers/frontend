@@ -1,4 +1,3 @@
-import { Dispatch, FC, SetStateAction } from "react";
 import { FaBars } from "react-icons/fa";
 
 const Bars = ({ onClick }: any) => (

@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { faker } from "@faker-js/faker";
 import Image from "next/image";
-import { FaHeart, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { BsTagFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 

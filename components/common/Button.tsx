@@ -1,16 +1,17 @@
-import React, { ButtonHTMLAttributes, FC } from 'react';
+import React, { ButtonHTMLAttributes, FC } from "react";
 
 type ButtonProps = {
-    className?:string
-}
+  className?: string;
+};
 
 const Button: FC<ButtonProps & ButtonHTMLAttributes<any>> = ({
   className,
-  children
+  children,
+  onClick,
 }) => (
-  <button className={`${className} `}>
-      {children}
+  <button className={`${className} `} onClick={onClick}>
+    {children}
   </button>
-)
+);
 
 export default Button;
