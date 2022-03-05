@@ -6,7 +6,7 @@ const Nav = () => {
   const { status } = useContext(AuthContext);
   if (status !== STATUS.LOGGED) return <></>;
 
-  return <div></div>;
+  return <div>Navbar</div>;
 };
 
 export default Nav;
