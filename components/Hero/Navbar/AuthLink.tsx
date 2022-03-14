@@ -16,6 +16,7 @@ const AuthLink: FC<any> = ({ children, className, filled }) => {
       )
       .then(({ data }) => {
         setUser(data);
+        router.push("/dashboard");
       })
       .catch((err: AxiosError) => {
         if (err.response?.status === 404) {

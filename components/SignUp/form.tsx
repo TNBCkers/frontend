@@ -4,7 +4,7 @@ import TextArea from "../common/form/TextArea";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Button from "../common/Button";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useSubmit } from "./hooks";
 
 const SignUpForm = () => {
@@ -16,15 +16,18 @@ const SignUpForm = () => {
   const [description, setDescription] = useState<string>("");
   const [error, setError] = useState<string>("");
 
-  const submit = useSubmit(
-    idToken as string,
-    {
-      name,
-      tagline,
-      description,
-      avatar,
-    },
-    setError
+  const submit = useCallback(
+    useSubmit(
+      idToken as string,
+      {
+        name,
+        tagline,
+        description,
+        avatar,
+      },
+      setError
+    ),
+    [idToken, name, tagline, description, avatar, setError]
   );
 
   if (!avatar) {
